@@ -167,6 +167,11 @@
                 <artifactId>jcip-annotations</artifactId>
                 <version>1.0</version>
             </dependency>
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-jdk15</artifactId>
+                <version>1.45</version>
+            </dependency>
             <!-- Runtime Dependencies -->
             <dependency>
                 <groupId>org.apache.xerces</groupId>
