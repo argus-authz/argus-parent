@@ -85,7 +85,10 @@
             <dependency>
                 <groupId>org.glite.voms</groupId>
                 <artifactId>voms-api-java</artifactId>
+<!--
                 <version>1.9.14-SWITCH</version>
+-->
+                <version>1.9.17</version>
             </dependency>
             <dependency>
                 <groupId>net.sf.ehcache</groupId>
