@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.glite.authz</groupId>
     <artifactId>argus-parent</artifactId>
@@ -8,11 +11,11 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>../pdp-pep-common</module>
-        <module>../pep-common</module>
-        <module>../pep-daemon</module>
-        <module>../pdp</module>
-        <module>../pep-java-cli</module>
+        <module>../org.glite.authz.pdp-pep-common</module>
+        <module>../org.glite.authz.pep-common</module>
+        <module>../org.glite.authz.pep-daemon</module>
+        <module>../org.glite.authz.pdp</module>
+        <module>../org.glite.authz.pep-java</module>
     </modules>
 
     <description>XACML based authorization service developed within the gLite project.
@@ -82,7 +85,10 @@
             <dependency>
                 <groupId>org.glite.voms</groupId>
                 <artifactId>voms-api-java</artifactId>
+<!--
                 <version>1.9.14-SWITCH</version>
+-->
+                <version>1.9.17</version>
             </dependency>
             <dependency>
                 <groupId>net.sf.ehcache</groupId>
@@ -160,6 +166,11 @@
                 <groupId>net.jcip</groupId>
                 <artifactId>jcip-annotations</artifactId>
                 <version>1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-jdk15</artifactId>
+                <version>1.45</version>
             </dependency>
             <!-- Runtime Dependencies -->
             <dependency>
