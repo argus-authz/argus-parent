@@ -75,19 +75,16 @@
             <dependency>
                 <groupId>org.glite.security</groupId>
                 <artifactId>trustmanager</artifactId>
-                <version>2.0.5</version>
+                <version>2.5.5</version>
             </dependency>
             <dependency>
                 <groupId>org.glite.security</groupId>
                 <artifactId>util-java</artifactId>
-                <version>2.0.1</version>
+                <version>2.8.6</version>
             </dependency>
             <dependency>
                 <groupId>org.glite.voms</groupId>
                 <artifactId>voms-api-java</artifactId>
-<!--
-                <version>1.9.14-SWITCH</version>
--->
                 <version>1.9.17</version>
             </dependency>
             <dependency>
