@@ -11,11 +11,13 @@
     <packaging>pom</packaging>
 
     <modules>
+<!--
         <module>../org.glite.authz.pdp-pep-common</module>
         <module>../org.glite.authz.pep-common</module>
         <module>../org.glite.authz.pep-daemon</module>
         <module>../org.glite.authz.pdp</module>
         <module>../org.glite.authz.pep-java</module>
+-->
     </modules>
 
     <description>XACML based authorization service developed within the gLite project.
