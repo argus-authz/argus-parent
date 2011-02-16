@@ -30,7 +30,7 @@
         <pep-java.version>2.0.1</pep-java.version>
         <pdp-pep-common.version>1.2.1</pdp-pep-common.version>
         <pdp.version>1.2.1</pdp.version>
-        <pepd.version>1.2.1</pepd.version>
+        <pepd.version>1.3.0</pepd.version>
         <!-- other properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <slf4j.version>1.5.8</slf4j.version>
