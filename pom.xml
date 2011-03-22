@@ -252,6 +252,8 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <!-- plugins management -->
     <build>
         <pluginManagement>
             <plugins>
@@ -268,7 +270,11 @@
                     <artifactId>maven-jar-plugin</artifactId>
                     <version>2.3.1</version>
                 </plugin>
-                <!-- license formatter -->
+                <plugin>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>2.1.2</version>
+                </plugin>
+                <!-- license checker/formatter -->
                 <plugin>
                     <groupId>com.mycila.maven-license-plugin</groupId>
                     <artifactId>maven-license-plugin</artifactId>
