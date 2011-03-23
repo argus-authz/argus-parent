@@ -72,6 +72,11 @@
             	<artifactId>pdp-pep-common</artifactId>
                 <version>1.2.1</version>
             </dependency>
+            <dependency>
+            	<groupId>org.glite.authz</groupId>
+            	<artifactId>pepd</artifactId>
+                <version>1.3.0</version>
+            </dependency>
             <!-- pep-java deps -->
             <dependency>
                 <groupId>commons-httpclient</groupId>
