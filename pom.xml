@@ -79,6 +79,11 @@
                 <version>${pdp-pep-common.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.glite.authz</groupId>
+                <artifactId>pepd</artifactId>
+                <version>${pepd.version}</version>
+            </dependency>
+             <dependency>
                 <groupId>org.opensaml</groupId>
                 <artifactId>opensaml</artifactId>
                 <version>2.3.2</version>
