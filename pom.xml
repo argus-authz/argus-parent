@@ -6,8 +6,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.glite.authz</groupId>
     <artifactId>argus-parent</artifactId>
-    <name>Argus parent module (EMI)</name>
-    <version>1.4.0</version>
+    <name>Argus 1.4 parent module (EMI)</name>
+    <version>1.4</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -73,6 +73,7 @@
                 <version>1.2.2</version>
             </dependency>
             <dependency>
+                <!-- needed for EES OH :( -->
             	<groupId>org.glite.authz</groupId>
             	<artifactId>pepd</artifactId>
                 <version>1.4.0</version>
