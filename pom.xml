@@ -7,18 +7,9 @@
     <groupId>org.glite.authz</groupId>
     <artifactId>argus-parent</artifactId>
     <name>Argus parent module (EMI)</name>
-    <version>1.3.1</version>
+	<!-- version should be EMI-1 or 1.3 -->
+    <version>1.3.0</version>
     <packaging>pom</packaging>
-
-    <modules>
-<!--
-        <module>../org.glite.authz.pdp-pep-common</module>
-        <module>../org.glite.authz.pep-common</module>
-        <module>../org.glite.authz.pep-daemon</module>
-        <module>../org.glite.authz.pdp</module>
-        <module>../org.glite.authz.pep-java</module>
--->
-    </modules>
 
     <description>Argus XACML based authorization service</description>
     <url>http://glite.web.cern.ch/glite/</url>
@@ -75,7 +66,7 @@
             <dependency>
             	<groupId>org.glite.authz</groupId>
             	<artifactId>pepd</artifactId>
-                <version>1.3.0</version>
+                <version>1.3.1</version>
             </dependency>
             <!-- pep-java deps -->
             <dependency>
@@ -164,13 +155,6 @@
                 <artifactId>logback-core</artifactId>
                 <version>${logback.version}</version>
             </dependency>
-<!--
-            <dependency>
-                <groupId>com.caucho</groupId>
-                <artifactId>hessian</artifactId>
-                <version>3.2.1</version>
-            </dependency>
--->
             <dependency>
                 <groupId>org.jruby.ext.posix</groupId>
                 <artifactId>jna-posix</artifactId>
