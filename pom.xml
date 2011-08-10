@@ -63,7 +63,7 @@
                 <version>1.2.2</version>
             </dependency>
             <!-- EES OH dependencies :( -->
-            <!-- SHOULD ONLY DEPENDS ON pep-common and pdp-pep-common -->
+            <!-- SHOULD ONLY DEPENDS ON pep-common AND pdp-pep-common, NOT ON pepd !!! -->
             <dependency>
                 <groupId>org.glite.authz</groupId>
                 <artifactId>pepd</artifactId>
