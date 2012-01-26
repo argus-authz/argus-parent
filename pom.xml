@@ -24,11 +24,6 @@
 
     <repositories>
         <repository>
-            <id>herasaf</id>
-            <name>HERAS-AF Repository</name>
-            <url>http://maven.herasaf.org/repo</url>
-        </repository>
-        <repository>
             <id>internet2</id>
             <name>Internet2 Releases</name>
             <url>http://shibboleth.internet2.edu/downloads/maven2</url>
@@ -43,6 +38,11 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
+        </repository>
+        <repository>
+            <id>herasaf</id>
+            <name>HERAS-AF Repository</name>
+            <url>http://maven.herasaf.org/repo</url>
         </repository>
         <repository>
             <id>central-uk</id>
