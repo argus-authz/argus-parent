@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>org.glite.authz</name>
+	<name>emi.argus.parent</name>
 	<comment>Argus maven multi-module parent</comment>
 	<projects>
 	</projects>
