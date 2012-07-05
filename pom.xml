@@ -26,7 +26,7 @@
         <repository>
             <id>internet2</id>
             <name>Internet2 Releases</name>
-            <url>http://shibboleth.internet2.edu/downloads/maven2</url>
+            <url>https://build.shibboleth.net/nexus/content/repositories/releases</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
