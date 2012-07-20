@@ -10,7 +10,7 @@
     <version>1.5</version>
     <packaging>pom</packaging>
 
-    <description>Argus Authorization Service</description>
+    <description>Argus Authorization Service (maven parent module)</description>
     <url>https://twiki.cern.ch/twiki/bin/view/EMI/ArgusEMIDocumentation</url>
     <inceptionYear>2008</inceptionYear>
     
@@ -60,7 +60,7 @@
             <dependency>
                 <groupId>org.glite.authz</groupId>
                 <artifactId>pep-common</artifactId>
-                <version>2.2.0</version>
+                <version>2.2.1</version>
             </dependency>
             <dependency>
                 <groupId>org.glite.authz</groupId>
@@ -378,4 +378,8 @@
         <name>EMI - European Middleware Initiative</name>
         <url>http://www.eu-emi.eu/</url>
     </organization>
+    <scm>
+    	<url>https://github.com/argus-authz/argus-parent</url>
+    	<connection>scm:git:https://github.com/argus-authz/argus-parent.git</connection>
+    </scm>
 </project>
