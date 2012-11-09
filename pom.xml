@@ -6,8 +6,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.glite.authz</groupId>
     <artifactId>argus-parent</artifactId>
-    <name>Argus parent module (EMI-2)</name>
-    <version>1.5</version>
+    <name>Argus parent module (EMI-3)</name>
+    <version>1.6</version>
     <packaging>pom</packaging>
 
     <description>Argus Authorization Service (maven parent module)</description>
@@ -188,34 +188,9 @@
             <dependency>
                 <groupId>org.bouncycastle</groupId>
                 <artifactId>bcprov-jdk15</artifactId>
-                <version>1.45</version>
+                <version>1.46</version>
             </dependency>
             <!-- Runtime Dependencies -->
-            <dependency>
-                <groupId>org.apache.xerces</groupId>
-                <artifactId>xml-apis</artifactId>
-                <version>2.9.1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.xerces</groupId>
-                <artifactId>xercesImpl</artifactId>
-                <version>2.9.1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.xerces</groupId>
-                <artifactId>resolver</artifactId>
-                <version>2.9.1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.xerces</groupId>
-                <artifactId>serializer</artifactId>
-                <version>2.9.1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.xalan</groupId>
-                <artifactId>xalan</artifactId>
-                <version>2.7.1</version>
-            </dependency>
             <!-- corrected groupId/artifactId/version -->
             <dependency>
             	<groupId>xerces</groupId>
