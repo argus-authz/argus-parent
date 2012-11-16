@@ -83,6 +83,7 @@
                 <artifactId>commons-logging</artifactId>
                 <version>1.1</version>
             </dependency>
+            <!-- others dependencies -->
             <dependency>
                 <groupId>eu.eu-emi.security</groupId>
                 <artifactId>canl</artifactId>
