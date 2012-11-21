@@ -6,7 +6,7 @@
     <groupId>org.glite.authz</groupId>
     <artifactId>argus-parent</artifactId>
     <name>Argus parent module (EMI-3)</name>
-    <!-- version 1.6-1 -->
+    <!-- version 1.6-EMI3_RC -->
     <version>1.6</version>
     <packaging>pom</packaging>
 
@@ -15,11 +15,14 @@
     <inceptionYear>2008</inceptionYear>
     
     <properties>
-        <!-- other properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- versioning -->
         <slf4j.version>1.5.8</slf4j.version>
         <logback.version>0.9.18</logback.version>
         <jetty.version>6.1.18</jetty.version>
+        <canl.version>1.1.0-rc2</canl.version>
+        <voms-api-java.version>3.0-EMI3_RC</voms-api-java.version>
+        <bouncycastle.version>1.46</bouncycastle.version>
     </properties>
 
     <repositories>
@@ -67,7 +70,30 @@
                 <artifactId>pdp-pep-common</artifactId>
                 <version>1.4.0</version>
             </dependency>
-            <!-- pep-java deps -->
+            <!-- EMI dependencies -->
+            <dependency>
+                <groupId>eu.eu-emi.security</groupId>
+                <artifactId>canl</artifactId>
+                <version>${canl.version}</version>
+            </dependency>
+            <dependency>
+                <!-- for emi.eu-emi.security:canl:1.1.0 -->
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-jdk16</artifactId>
+                <version>${bouncycastle.version}</version>
+            </dependency>
+            <dependency>
+               <groupId>org.italiangrid</groupId>
+               <artifactId>voms-api-java</artifactId>
+               <version>${voms-api-java.version}</version>
+            </dependency>
+            <dependency>
+                <!-- for org.italiangrid:voms-api-java:3.0 -->
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcmail-jdk16</artifactId>
+                <version>${bouncycastle.version}</version>
+            </dependency>            
+            <!-- pep-api-java dependencies -->
             <dependency>
                 <groupId>commons-httpclient</groupId>
                 <artifactId>commons-httpclient</artifactId>
@@ -83,18 +109,7 @@
                 <artifactId>commons-logging</artifactId>
                 <version>1.1</version>
             </dependency>
-            <!-- others dependencies -->
-            <dependency>
-                <groupId>eu.eu-emi.security</groupId>
-                <artifactId>canl</artifactId>
-                <version>1.1.0-rc2</version>
-            </dependency>
-            <dependency>
-                <!-- comes with emi.eu-emi.security:canl:1.1.0 -->
-                <groupId>org.bouncycastle</groupId>
-                <artifactId>bcprov-jdk16</artifactId>
-                <version>1.46</version>
-            </dependency>
+            <!-- other dependencies -->
             <dependency>
                 <groupId>org.opensaml</groupId>
                 <artifactId>opensaml</artifactId>
