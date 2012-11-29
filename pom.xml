@@ -257,6 +257,12 @@
                 <artifactId>xmlunit</artifactId>
                 <version>1.0</version>
             </dependency>
+            <dependency>
+                <!-- DEPLOY: support for scpexe: -->
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh-external</artifactId>
+                <version>2.2</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
