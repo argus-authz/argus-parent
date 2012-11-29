@@ -262,6 +262,13 @@
 
     <!-- plugins management -->
     <build>
+    	<extensions>
+      		<extension>
+        		<!-- support for scpexe: -->
+        		<groupId>org.apache.maven.wagon</groupId>
+        		<artifactId>wagon-ssh-external</artifactId>
+      		</extension>
+    	</extensions>
         <pluginManagement>
             <plugins>
                 <plugin>
