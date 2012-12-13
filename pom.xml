@@ -262,14 +262,14 @@
 
     <!-- plugins management -->
     <build>
-    	<extensions>
-      		<extension>
-        		<!-- DEPLOY: support for scpexe: -->
+      <extensions>
+            <extension>
+                <!-- DEPLOY: support for scpexe: -->
                 <groupId>org.apache.maven.wagon</groupId>
                 <artifactId>wagon-ssh-external</artifactId>
                 <version>2.2</version>
-      		</extension>
-    	</extensions>
+            </extension>
+      </extensions>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -335,8 +335,7 @@
     <licenses>
         <license>
             <name>Apache 2</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt
-            </url>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -346,7 +345,7 @@
         <url>http://www.eu-emi.eu/</url>
     </organization>
     <scm>
-    	<url>https://github.com/argus-authz/argus-parent</url>
-    	<connection>scm:git:https://github.com/argus-authz/argus-parent.git</connection>
+        <url>https://github.com/argus-authz/argus-parent</url>
+        <connection>scm:git:https://github.com/argus-authz/argus-parent.git</connection>
     </scm>
 </project>
