@@ -78,6 +78,12 @@
             </dependency>
             <dependency>
                 <!-- for emi.eu-emi.security:canl:1.1.0 -->
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>1.4</version>
+            </dependency>            
+            <dependency>
+                <!-- for emi.eu-emi.security:canl:1.1.0 -->
                 <groupId>org.bouncycastle</groupId>
                 <artifactId>bcprov-jdk16</artifactId>
                 <version>${bouncycastle.version}</version>
