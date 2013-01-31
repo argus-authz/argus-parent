@@ -20,7 +20,7 @@
         <slf4j.version>1.5.8</slf4j.version>
         <logback.version>0.9.18</logback.version>
         <jetty.version>6.1.18</jetty.version>
-        <canl.version>1.1.0-rc3</canl.version>
+        <canl.version>1.1.0</canl.version>
         <voms-api-java.version>3.0.0-rc2</voms-api-java.version>
         <bouncycastle.version>1.46</bouncycastle.version>
     </properties>
