@@ -6,7 +6,8 @@
     <groupId>org.glite.authz</groupId>
     <artifactId>argus-parent</artifactId>
     <name>Argus parent module (EMI-3)</name>
-    <!-- version 1.6-EMI3_RC -->
+
+    <!-- version: 1.6-1 -->
     <version>1.6</version>
     <packaging>pom</packaging>
 
