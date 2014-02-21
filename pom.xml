@@ -330,12 +330,12 @@
 
     <distributionManagement>
         <repository>
-            <id>release-repo</id>
-            <url>${dist.release.url}</url>
+            <id>switch</id>
+            <url>scpexe://www.switch.ch/var/sites/ch.switch.www/grid/authz/docs/maven2/release</url>
         </repository>
         <snapshotRepository>
-            <id>snapshot-repo</id>
-            <url>${dist.snapshot.url}</url>
+            <id>switch-snapshot</id>
+            <url>scpexe://www.switch.ch/var/sites/ch.switch.www/grid/authz/docs/maven2/snapshot</url>
         </snapshotRepository>
     </distributionManagement>
 
