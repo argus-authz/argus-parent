@@ -8,7 +8,7 @@
     <name>Argus parent module (EMI-3)</name>
 
     <!-- version: 1.6-2 -->
-    <version>1.6</version>
+    <version>1.7-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <description>Argus Authorization Service (maven parent module)</description>
@@ -20,10 +20,10 @@
         <!-- versioning -->
         <slf4j.version>1.5.8</slf4j.version>
         <logback.version>0.9.18</logback.version>
-        <jetty.version>6.1.26</jetty.version>
-        <canl.version>1.3.2</canl.version>
-        <voms-api-java.version>3.0.2</voms-api-java.version>
-        <bouncycastle.version>1.46</bouncycastle.version>
+        <jetty-utils.version>0.1.0-SNAPSHOT</jetty-utils.version>
+        <canl.version>2.1.1</canl.version>
+        <voms-api-java.version>3.1.0.rc1-SNAPSHOT</voms-api-java.version>
+        <bouncycastle.version>1.50</bouncycastle.version>
     </properties>
 
     <repositories>
@@ -53,7 +53,7 @@
             <dependency>
                 <groupId>org.glite.authz</groupId>
                 <artifactId>pdp-pep-common</artifactId>
-                <version>1.4.0</version>
+                <version>1.5.0-SNAPSHOT</version>
             </dependency>
             <!-- EMI dependencies -->
             <dependency>
@@ -77,12 +77,6 @@
                <groupId>org.italiangrid</groupId>
                <artifactId>voms-api-java</artifactId>
                <version>${voms-api-java.version}</version>
-            </dependency>
-            <dependency>
-                <!-- for org.italiangrid:voms-api-java:3.0 -->
-                <groupId>org.bouncycastle</groupId>
-                <artifactId>bcmail-jdk16</artifactId>
-                <version>${bouncycastle.version}</version>
             </dependency>
             <!-- pep-api-java dependencies -->
             <dependency>
@@ -145,6 +139,14 @@
                 <version>1.7.2</version>
             </dependency>
             <dependency>
+                <groupId>org.italiangrid</groupId>
+                <artifactId>jetty-utils</artifactId>
+                <version>${jetty-utils.version}</version>
+            </dependency>
+
+            <!-- Get jetty from jetty-utils -->
+            <!--
+            <dependency>
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>jetty</artifactId>
                 <version>${jetty.version}</version>
@@ -159,6 +161,7 @@
                 <artifactId>jetty-java5-threadpool</artifactId>
                 <version>${jetty.version}</version>
             </dependency>
+            -->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
