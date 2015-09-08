@@ -18,8 +18,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- versioning -->
-        <slf4j.version>1.5.8</slf4j.version>
-        <logback.version>0.9.18</logback.version>
+        <slf4j.version>1.7.12</slf4j.version>
+        <logback.version>1.0.13</logback.version>
         <jetty-utils.version>0.1.0-SNAPSHOT</jetty-utils.version>
         <canl.version>2.1.1</canl.version>
         <voms-api-java.version>3.1.0.rc1-SNAPSHOT</voms-api-java.version>
