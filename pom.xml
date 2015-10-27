@@ -69,7 +69,7 @@
             <dependency>
                 <groupId>org.glite.authz</groupId>
                 <artifactId>pdp-pep-common</artifactId>
-                <version>1.4.0</version>
+                <version>1.4.1</version>
             </dependency>
             <!-- EMI dependencies -->
             <dependency>
