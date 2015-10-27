@@ -14,7 +14,7 @@
     <description>Argus Authorization Service (maven parent module)</description>
     <url>https://twiki.cern.ch/twiki/bin/view/EMI/ArgusEMIDocumentation</url>
     <inceptionYear>2008</inceptionYear>
-    
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- versioning -->
@@ -82,7 +82,7 @@
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>1.4</version>
-            </dependency>            
+            </dependency>
             <dependency>
                 <!-- for emi.eu-emi.security:canl:1.1.0 -->
                 <groupId>org.bouncycastle</groupId>
@@ -99,7 +99,7 @@
                 <groupId>org.bouncycastle</groupId>
                 <artifactId>bcmail-jdk16</artifactId>
                 <version>${bouncycastle.version}</version>
-            </dependency>            
+            </dependency>
             <!-- pep-api-java dependencies -->
             <dependency>
                 <groupId>commons-httpclient</groupId>
@@ -329,14 +329,17 @@
     </build>
 
     <distributionManagement>
-        <repository>
-            <id>switch</id>
-            <url>scpexe://www.switch.ch/var/sites/ch.switch.www/grid/authz/docs/maven2/release</url>
-        </repository>
-        <snapshotRepository>
-            <id>switch-snapshot</id>
-            <url>scpexe://www.switch.ch/var/sites/ch.switch.www/grid/authz/docs/maven2/snapshot</url>
-        </snapshotRepository>
+      <repository>
+        <id>cnaf-releases</id>
+        <name>CNAF releases</name>
+        <url>http://radiohead.cnaf.infn.it:8081/nexus/content/repositories/cnaf-releases/</url>
+      </repository>
+
+      <snapshotRepository>
+        <id>cnaf-snapshots</id>
+        <name>CNAF snapshots</name>
+        <url>http://radiohead.cnaf.infn.it:8081/nexus/content/repositories/cnaf-snapshots/</url>
+      </snapshotRepository>
     </distributionManagement>
 
     <licenses>
