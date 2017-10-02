@@ -1,328 +1,327 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>org.glite.authz</groupId>
-    <artifactId>argus-parent</artifactId>
-    <name>Argus parent module (EMI-3)</name>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.glite.authz</groupId>
+	<artifactId>argus-parent</artifactId>
+	<name>Argus parent module (EMI-3)</name>
 
-    <version>1.7.1</version>
-    <packaging>pom</packaging>
+	<version>1.7.2-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
-    <description>Argus Authorization Service (maven parent module)</description>
-    <url>https://twiki.cern.ch/twiki/bin/view/EMI/ArgusEMIDocumentation</url>
-    <inceptionYear>2008</inceptionYear>
+	<description>Argus Authorization Service (maven parent module)</description>
+	<url>https://twiki.cern.ch/twiki/bin/view/EMI/ArgusEMIDocumentation</url>
+	<inceptionYear>2008</inceptionYear>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- versioning -->
-        <slf4j.version>1.7.12</slf4j.version>
-        <logback.version>1.0.13</logback.version>
-        <jetty-utils.version>0.1.0</jetty-utils.version>
-        <canl.version>2.1.2</canl.version>
-        <voms-api-java.version>3.1.0</voms-api-java.version>
-        <bouncycastle.version>1.50</bouncycastle.version>
-    </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- versioning -->
+		<slf4j.version>1.7.12</slf4j.version>
+		<logback.version>1.0.13</logback.version>
+		<jetty-utils.version>0.1.0</jetty-utils.version>
+		<canl.version>2.1.2</canl.version>
+		<voms-api-java.version>3.1.0</voms-api-java.version>
+		<bouncycastle.version>1.50</bouncycastle.version>
+	</properties>
 
-    <repositories>
-        <repository>
-            <id>herasaf</id>
-            <name>HERAS-AF Repository</name>
-            <url>http://maven.herasaf.org/repo</url>
-        </repository>
-        <repository>
-            <id>central-uk</id>
-            <name>Maven Repository Mirror</name>
-            <url>http://uk.maven.org/maven2</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
+	<repositories>
+		<repository>
+			<id>herasaf</id>
+			<name>HERAS-AF Repository</name>
+			<url>http://maven.herasaf.org/repo</url>
+		</repository>
+		<repository>
+			<id>central-uk</id>
+			<name>Maven Repository Mirror</name>
+			<url>http://uk.maven.org/maven2</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 
-    <dependencyManagement>
-        <dependencies>
-            <!-- Argus internal dependencies -->
-            <dependency>
-                <groupId>org.glite.authz</groupId>
-                <artifactId>pep-common</artifactId>
-                <version>2.3.1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.glite.authz</groupId>
-                <artifactId>pdp-pep-common</artifactId>
-                <version>1.5.1</version>
-            </dependency>
-            <!-- EMI dependencies -->
-            <dependency>
-                <groupId>eu.eu-emi.security</groupId>
-                <artifactId>canl</artifactId>
-                <version>${canl.version}</version>
-            </dependency>
-            <dependency>
-                <!-- for emi.eu-emi.security:canl:1.1.0 -->
-                <groupId>commons-io</groupId>
-                <artifactId>commons-io</artifactId>
-                <version>1.4</version>
-            </dependency>
-            <dependency>
-                <!-- for emi.eu-emi.security:canl:1.1.0 -->
-                <groupId>org.bouncycastle</groupId>
-                <artifactId>bcprov-jdk16</artifactId>
-                <version>${bouncycastle.version}</version>
-            </dependency>
-            <dependency>
-               <groupId>org.italiangrid</groupId>
-               <artifactId>voms-api-java</artifactId>
-               <version>${voms-api-java.version}</version>
-            </dependency>
-            <!-- pep-api-java dependencies -->
-            <dependency>
-                <groupId>commons-httpclient</groupId>
-                <artifactId>commons-httpclient</artifactId>
-                <version>3.0.1</version>
-            </dependency>
-            <dependency>
-                <groupId>log4j</groupId>
-                <artifactId>log4j</artifactId>
-                <version>1.2.13</version>
-            </dependency>
-            <dependency>
-                <groupId>commons-logging</groupId>
-                <artifactId>commons-logging</artifactId>
-                <version>1.1</version>
-            </dependency>
-            <!-- other dependencies -->
-            <dependency>
-                <groupId>org.opensaml</groupId>
-                <artifactId>opensaml</artifactId>
-                <version>2.6.4</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>commons-logging</groupId>
-                        <artifactId>commons-logging</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>jcl-over-slf4j</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>jul-to-slf4j</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>net.jcip</groupId>
-                        <artifactId>jcip-annotations</artifactId>
-                    </exclusion>
-                    <!-- uses slf4j -->
-                    <exclusion>
-                        <groupId>log4j</groupId>
-                        <artifactId>log4j</artifactId>
-                    </exclusion>
-                    <!-- conflict with bcprov-jdk16 (canl) -->
-                    <exclusion>
-                        <groupId>org.bouncycastle</groupId>
-                        <artifactId>bcprov-jdk15</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>org.herasaf.xacml.core</groupId>
-                <artifactId>herasaf-xacml-core</artifactId>
-                <version>1.0.0-M2</version>
-            </dependency>
-            <dependency>
-                <groupId>net.sf.ehcache</groupId>
-                <artifactId>ehcache</artifactId>
-                <version>2.10.1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.italiangrid</groupId>
-                <artifactId>jetty-utils</artifactId>
-                <version>${jetty-utils.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-classic</artifactId>
-                <version>${logback.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-core</artifactId>
-                <version>${logback.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jruby.ext.posix</groupId>
-                <artifactId>jna-posix</artifactId>
-                <version>1.0.3</version>
-            </dependency>
-            <dependency>
-                <groupId>net.java.dev.jna</groupId>
-                <artifactId>jna</artifactId>
-                <version>3.0.9</version>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>${slf4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>jcl-over-slf4j</artifactId>
-                <version>${slf4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>jul-to-slf4j</artifactId>
-                <version>${slf4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>log4j-over-slf4j</artifactId>
-                <version>${slf4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.ini4j</groupId>
-                <artifactId>ini4j</artifactId>
-                <version>0.5.2</version>
-            </dependency>
-            <!-- Provided Dependencies -->
-            <dependency>
-                <groupId>net.jcip</groupId>
-                <artifactId>jcip-annotations</artifactId>
-                <version>1.0</version>
-            </dependency>
-            <!-- Runtime Dependencies -->
-            <!-- corrected groupId/artifactId/version -->
-            <dependency>
-                <groupId>xerces</groupId>
-                <artifactId>xercesImpl</artifactId>
-                <version>2.9.1</version>
-            </dependency>
-            <dependency>
-                <groupId>xml-apis</groupId>
-                <artifactId>xml-apis</artifactId>
-                <version>1.3.04</version>
-            </dependency>
-            <dependency>
-                <groupId>xml-resolver</groupId>
-                <artifactId>xml-resolver</artifactId>
-                <version>1.2</version>
-            </dependency>
-            <dependency>
-                <groupId>xalan</groupId>
-                <artifactId>xalan</artifactId>
-                <version>2.7.1</version>
-            </dependency>
-            <dependency>
-                <groupId>xalan</groupId>
-                <artifactId>serializer</artifactId>
-                <version>2.7.1</version>
-            </dependency>
-              <!-- Test Dependencies -->
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.11</version>
-            </dependency>
-            <dependency>
-                <groupId>xmlunit</groupId>
-                <artifactId>xmlunit</artifactId>
-                <version>1.0</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+	<dependencyManagement>
+		<dependencies>
+			<!-- Argus internal dependencies -->
+			<dependency>
+				<groupId>org.glite.authz</groupId>
+				<artifactId>pep-common</artifactId>
+				<version>2.3.1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.glite.authz</groupId>
+				<artifactId>pdp-pep-common</artifactId>
+				<version>1.5.2-SNAPSHOT</version>
+			</dependency>
+			<!-- EMI dependencies -->
+			<dependency>
+				<groupId>eu.eu-emi.security</groupId>
+				<artifactId>canl</artifactId>
+				<version>${canl.version}</version>
+			</dependency>
+			<dependency>
+				<!-- for emi.eu-emi.security:canl:1.1.0 -->
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>1.4</version>
+			</dependency>
+			<dependency>
+				<!-- for emi.eu-emi.security:canl:1.1.0 -->
+				<groupId>org.bouncycastle</groupId>
+				<artifactId>bcprov-jdk16</artifactId>
+				<version>${bouncycastle.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.italiangrid</groupId>
+				<artifactId>voms-api-java</artifactId>
+				<version>${voms-api-java.version}</version>
+			</dependency>
+			<!-- pep-api-java dependencies -->
+			<dependency>
+				<groupId>commons-httpclient</groupId>
+				<artifactId>commons-httpclient</artifactId>
+				<version>3.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>1.2.13</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+				<version>1.1</version>
+			</dependency>
+			<!-- other dependencies -->
+			<dependency>
+				<groupId>org.opensaml</groupId>
+				<artifactId>opensaml</artifactId>
+				<version>2.6.4</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>jcl-over-slf4j</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>jul-to-slf4j</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>net.jcip</groupId>
+						<artifactId>jcip-annotations</artifactId>
+					</exclusion>
+					<!-- uses slf4j -->
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+					<!-- conflict with bcprov-jdk16 (canl) -->
+					<exclusion>
+						<groupId>org.bouncycastle</groupId>
+						<artifactId>bcprov-jdk15</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.herasaf.xacml.core</groupId>
+				<artifactId>herasaf-xacml-core</artifactId>
+				<version>1.0.0-M2</version>
+			</dependency>
+			<dependency>
+				<groupId>net.sf.ehcache</groupId>
+				<artifactId>ehcache</artifactId>
+				<version>2.10.4</version>
+			</dependency>
+			<dependency>
+				<groupId>org.italiangrid</groupId>
+				<artifactId>jetty-utils</artifactId>
+				<version>${jetty-utils.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>${logback.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-core</artifactId>
+				<version>${logback.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jruby.ext.posix</groupId>
+				<artifactId>jna-posix</artifactId>
+				<version>1.0.3</version>
+			</dependency>
+			<dependency>
+				<groupId>net.java.dev.jna</groupId>
+				<artifactId>jna</artifactId>
+				<version>3.0.9</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jcl-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jul-to-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>log4j-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.ini4j</groupId>
+				<artifactId>ini4j</artifactId>
+				<version>0.5.2</version>
+			</dependency>
+			<!-- Provided Dependencies -->
+			<dependency>
+				<groupId>net.jcip</groupId>
+				<artifactId>jcip-annotations</artifactId>
+				<version>1.0</version>
+			</dependency>
+			<!-- Runtime Dependencies -->
+			<!-- corrected groupId/artifactId/version -->
+			<dependency>
+				<groupId>xerces</groupId>
+				<artifactId>xercesImpl</artifactId>
+				<version>2.9.1</version>
+			</dependency>
+			<dependency>
+				<groupId>xml-apis</groupId>
+				<artifactId>xml-apis</artifactId>
+				<version>1.3.04</version>
+			</dependency>
+			<dependency>
+				<groupId>xml-resolver</groupId>
+				<artifactId>xml-resolver</artifactId>
+				<version>1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>xalan</groupId>
+				<artifactId>xalan</artifactId>
+				<version>2.7.1</version>
+			</dependency>
+			<dependency>
+				<groupId>xalan</groupId>
+				<artifactId>serializer</artifactId>
+				<version>2.7.1</version>
+			</dependency>
+			<!-- Test Dependencies -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.11</version>
+			</dependency>
+			<dependency>
+				<groupId>xmlunit</groupId>
+				<artifactId>xmlunit</artifactId>
+				<version>1.0</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
-    <!-- plugins management -->
-    <build>
-      <extensions>
-            <extension>
-                <!-- DEPLOY: support for scpexe: -->
-                <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-ssh-external</artifactId>
-                <version>2.2</version>
-            </extension>
-      </extensions>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>2.0.2</version>
-                    <configuration>
-                        <source>1.8</source>
-                        <target>1.8</target>
-                        <debug>true</debug>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-assembly-plugin</artifactId>
-                    <version>2.2.1</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-resources-plugin</artifactId>
-                    <version>2.5</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>2.3.1</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-source-plugin</artifactId>
-                    <version>2.1.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>2.9</version>
-                </plugin>
-                <!-- license checker/formatter -->
-                <plugin>
-                    <groupId>com.mycila.maven-license-plugin</groupId>
-                    <artifactId>maven-license-plugin</artifactId>
-                    <version>1.8.0</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>exec-maven-plugin</artifactId>
-                    <version>1.2</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>axistools-maven-plugin</artifactId>
-                    <version>1.4</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
+	<!-- plugins management -->
+	<build>
+		<extensions>
+			<extension>
+				<!-- DEPLOY: support for scpexe: -->
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ssh-external</artifactId>
+				<version>2.2</version>
+			</extension>
+		</extensions>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>2.0.2</version>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+						<debug>true</debug>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>2.2.1</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.5</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>2.3.1</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>2.1.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>2.9</version>
+				</plugin>
+				<!-- license checker/formatter -->
+				<plugin>
+					<groupId>com.mycila.maven-license-plugin</groupId>
+					<artifactId>maven-license-plugin</artifactId>
+					<version>1.8.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>1.2</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>axistools-maven-plugin</artifactId>
+					<version>1.4</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 
-    <distributionManagement>
-      <repository>
-        <id>cnaf-releases</id>
-        <name>CNAF releases</name>
-        <url>http://radiohead.cnaf.infn.it:8081/nexus/content/repositories/cnaf-releases/</url>
-      </repository>
+	<distributionManagement>
+		<repository>
+			<id>cnaf-releases</id>
+			<name>CNAF releases</name>
+			<url>https://repo.cloud.cnaf.infn.it/repository/cnaf-releases/</url>
+		</repository>
 
-      <snapshotRepository>
-        <id>cnaf-snapshots</id>
-        <name>CNAF snapshots</name>
-        <url>http://radiohead.cnaf.infn.it:8081/nexus/content/repositories/cnaf-snapshots/</url>
-      </snapshotRepository>
-    </distributionManagement>
+		<snapshotRepository>
+			<id>cnaf-snapshots</id>
+			<name>CNAF snapshots</name>
+			<url>https://repo.cloud.cnaf.infn.it/repository/cnaf-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
-    <licenses>
-        <license>
-            <name>Apache 2</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
+	<licenses>
+		<license>
+			<name>Apache 2</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 
-    <organization>
-        <name>EMI - European Middleware Initiative</name>
-        <url>http://www.eu-emi.eu/</url>
-    </organization>
-    <scm>
-        <url>https://github.com/argus-authz/argus-parent</url>
-        <connection>scm:git:https://github.com/argus-authz/argus-parent.git</connection>
-    </scm>
+	<organization>
+		<name>EMI - European Middleware Initiative</name>
+		<url>http://www.eu-emi.eu/</url>
+	</organization>
+	<scm>
+		<url>https://github.com/argus-authz/argus-parent</url>
+		<connection>scm:git:https://github.com/argus-authz/argus-parent.git</connection>
+	</scm>
 </project>
