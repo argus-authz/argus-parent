@@ -14,7 +14,9 @@ pipeline {
   stages {
     stage('deploy') {
       steps {
-        sh "mvn clean -U -B deploy"
+        container('maven-runner'){
+          sh "mvn clean -U -B deploy"
+        }
       }
     }
     
