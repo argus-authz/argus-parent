@@ -15,7 +15,7 @@ pipeline {
     stage('prepare') {
       steps {
         container('maven-runner'){
-          sh 'sed -i \'s#http:\\/\\/radiohead\\.cnaf\\.infn\\.it:8081\\/nexus\\/content\\/repositories#https:\\/\\/repo\\.cloud\\.cnaf\\.infn\\.it\\/repository#g\' pom.xml'
+          sh 'sed -i \'s#http:\\/\\/radiohead\\.cnaf\\.infn\\.it:8081\\/nexus\\/content\\/repositories#https:\\/\\/repo\\.cloud\\.ba\\.infn\\.it\\/repository#g\' pom.xml'
         }
       }
     }
