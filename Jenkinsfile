@@ -22,9 +22,7 @@ pipeline {
     
     stage('result'){
       steps {
-        script {
-          currentBuild.result = 'SUCCESS'
-        }
+        script { currentBuild.result = 'SUCCESS' }
       }
     }
   }
