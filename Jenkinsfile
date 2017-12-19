@@ -12,6 +12,7 @@ pipeline {
   }
   
   stages {
+
     stage('deploy') {
       steps {
         container('maven-runner'){

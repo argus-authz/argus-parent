@@ -7,7 +7,7 @@
     <artifactId>argus-parent</artifactId>
     <name>Argus parent module (EMI-3)</name>
 
-    <version>1.7-SNAPSHOT</version>
+    <version>1.7.1</version>
     <packaging>pom</packaging>
 
     <description>Argus Authorization Service (maven parent module)</description>
@@ -19,7 +19,7 @@
         <!-- versioning -->
         <slf4j.version>1.7.12</slf4j.version>
         <logback.version>1.0.13</logback.version>
-        <jetty-utils.version>0.1.0-SNAPSHOT</jetty-utils.version>
+        <jetty-utils.version>0.1.0</jetty-utils.version>
         <canl.version>2.1.2</canl.version>
         <voms-api-java.version>3.1.0</voms-api-java.version>
         <bouncycastle.version>1.50</bouncycastle.version>
@@ -52,7 +52,7 @@
             <dependency>
                 <groupId>org.glite.authz</groupId>
                 <artifactId>pdp-pep-common</artifactId>
-                <version>1.5.0</version>
+                <version>1.5.1</version>
             </dependency>
             <!-- EMI dependencies -->
             <dependency>
@@ -224,7 +224,7 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>3.8.1</version>
+                <version>4.11</version>
             </dependency>
             <dependency>
                 <groupId>xmlunit</groupId>
@@ -250,8 +250,8 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>2.0.2</version>
                     <configuration>
-                        <source>1.5</source>
-                        <target>1.5</target>
+                        <source>1.8</source>
+                        <target>1.8</target>
                         <debug>true</debug>
                     </configuration>
                 </plugin>
