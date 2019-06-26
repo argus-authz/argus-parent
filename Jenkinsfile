@@ -1,7 +1,17 @@
+@Library('sd')_
+def kubeLabel = getKubeLabel()
+
 pipeline {
-  
-  agent { label 'maven' }
-  
+
+  agent {
+    kubernetes {
+      label "${kubeLabel}"
+      cloud 'Kube mwdevel'
+      defaultContainer 'runner'
+      inheritFrom 'ci-template'
+    }
+  }
+ 
   options {
     timeout(time: 1, unit: 'HOURS')
     buildDiscarder(logRotator(numToKeepStr: '5'))
@@ -15,9 +25,7 @@ pipeline {
 
     stage('deploy') {
       steps {
-        container('maven-runner'){
-          sh "mvn clean -U -B deploy"
-        }
+        sh "mvn clean -U -B deploy"
       }
     }
     
@@ -36,8 +44,8 @@ pipeline {
     }
     
     changed {
-      script{
-        if('SUCCESS'.equals(currentBuild.result)) {
+      script {
+        if ('SUCCESS'.equals(currentBuild.result)) {
           slackSend color: 'good', message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} Back to normal (<${env.BUILD_URL}|Open>)"
         }
       }
