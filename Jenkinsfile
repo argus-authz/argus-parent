@@ -22,18 +22,15 @@ pipeline {
   }
   
   stages {
-
     stage('deploy') {
       steps {
         sh "mvn clean -U -B deploy"
       }
     }
     
-    stage('result'){
+    stage('result') {
       steps {
-        script {
-          currentBuild.result = 'SUCCESS'
-        }
+        script { currentBuild.result = 'SUCCESS' }
       }
     }
   }
