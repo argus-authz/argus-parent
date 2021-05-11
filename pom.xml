@@ -7,7 +7,7 @@
 	<artifactId>argus-parent</artifactId>
 	<name>Argus parent module (EMI-3)</name>
 
-	<version>1.7.4</version>
+	<version>1.7.5-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<description>Argus Authorization Service (maven parent module)</description>
@@ -20,9 +20,9 @@
 		<slf4j.version>1.7.12</slf4j.version>
 		<logback.version>1.0.13</logback.version>
 		<jetty-utils.version>0.4.2.v20200516</jetty-utils.version>
-		<canl.version>2.1.2</canl.version>
+		<canl.version>2.6.0</canl.version>
 		<voms-api-java.version>3.3.2</voms-api-java.version>
-		<bouncycastle.version>1.50</bouncycastle.version>
+		<bouncycastle.version>1.58</bouncycastle.version>
 	</properties>
 
 	<repositories>
@@ -59,12 +59,6 @@
 				<groupId>eu.eu-emi.security</groupId>
 				<artifactId>canl</artifactId>
 				<version>${canl.version}</version>
-			</dependency>
-			<dependency>
-				<!-- for emi.eu-emi.security:canl:1.1.0 -->
-				<groupId>commons-io</groupId>
-				<artifactId>commons-io</artifactId>
-				<version>1.4</version>
 			</dependency>
 			<dependency>
 				<!-- for emi.eu-emi.security:canl:1.1.0 -->
