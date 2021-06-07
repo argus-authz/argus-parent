@@ -19,7 +19,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- versioning -->
         <slf4j.version>1.5.8</slf4j.version>
-        <logback.version>0.9.18</logback.version>
+        <logback.version>1.2.0</logback.version>
         <jetty.version>6.1.26</jetty.version>
         <canl.version>1.3.2</canl.version>
         <voms-api-java.version>3.0.2</voms-api-java.version>
